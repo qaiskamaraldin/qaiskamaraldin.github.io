@@ -1,0 +1,136 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+#header {
+    display: grid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+#links {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    padding: 2px;
+    border-radius: 10px;
+    transition: color 0.5s ease;
+}
+
+.link:hover {
+    color: #e9980c;
+}
+
+#landing {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Text Styling */
+.textcontent {
+    width: 100%;
+    height: 100%;
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#welcome {
+    font-size: 4.5rem;
+
+}
+
+.statsquares {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+}
+
+.stats{
+}
+
+#firststat{
+    grid: 1 56;
+}
+#
+#
+#
+
+
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.social-media-links img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.social-media-links a:hover img {
+    transform: scale(1.1);
+}
+
+#me {
+    width: 80%;
+    justify-self: end;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+
+.imageholder {
+    grid-column: 3;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#sublanding {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
