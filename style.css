@@ -54,7 +54,6 @@ body {
 #landing {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -62,37 +61,17 @@ body {
 
 /* Text Styling */
 .textcontent {
-    width: 100%;
-    height: 100%;
-    grid-column: 2;
-    grid-row: 2;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #welcome {
     font-size: 4.5rem;
-
+    font-weight: 900;
+    text-align: center;
 }
-
-.statsquares {
-    display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 2;
-}
-
-.stats{
-}
-
-#firststat{
-    grid: 1 56;
-}
-#
-#
-#
-
 
 .social-media-links {
     display: flex;
@@ -111,26 +90,87 @@ body {
 }
 
 #me {
-    width: 80%;
-    justify-self: end;
+    width: 70%;
     border-radius: 10px;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
 }
 
-
 .imageholder {
+    padding-top: 30px;
     grid-column: 3;
-    grid-row: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-
 #sublanding {
+    background-color: black;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+/* Cursor Styling */
+.cursor {
+    display: inline-block;
+    width: 10px; /* Adjust width as needed */
+    height: 1em; /* Match height to font size */
+    background-color: black; /* Color of the cursor */
+    animation: blink 0.7s step-end infinite; /* Blinking effect */
+}
+
+@keyframes blink {
+    0%, 100% { background-color: transparent; }
+    50% { background-color: black; }
+}
+
+.cursor.active {
+    display: inline-block; /* Show cursor when active */
+}
+
+/* Fade-In Effect */
+.fade-in {
+    opacity: 0; /* Start invisible */
+    transform: translateX(-50px); /* Start from the left */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for opacity and position */
+}
+
+.fade-in.visible {
+    opacity: 1; /* Make it visible */
+    transform: translateX(0); /* Move to original position */
+}
+
+/* Arrow Styling */
+.scroll-arrow {
+    position: fixed;
+    bottom: 20px; /* Adjust the position from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centering */
+    font-size: 2rem; /* Size of the arrow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease; /* Smooth transition for arrow movement */
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px; /* Width of the cursor */
+    height: 20px; /* Height of the cursor */
+    background-color: black; /* Cursor color */
+    margin-left: 5px; /* Space between text and cursor */
+    animation: pulse 1s infinite; /* Animation to pulse */
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
